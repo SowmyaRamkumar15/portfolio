@@ -1,0 +1,245 @@
+/* ===== Editorial LeetCode Dashboard Refinement ===== */
+.leetcode-dashboard {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.leetcode-dashboard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.leetcode-dashboard__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.leetcode-dashboard__logo-box {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background-color: var(--accent-terracotta-tint);
+  color: var(--accent-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(184, 117, 89, 0.2);
+}
+
+.leetcode-dashboard__title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.leetcode-dashboard__handle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.leetcode-dashboard__profile-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.leetcode-dashboard__profile-btn:hover {
+  border-color: var(--accent-secondary);
+  color: var(--accent-secondary);
+}
+
+.leetcode-dashboard__stats-grid {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  padding-top: 1.75rem;
+  align-items: center;
+}
+
+/* Main Circle Progress */
+.leetcode-dashboard__main-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.leetcode-dashboard__circle-progress {
+  position: relative;
+  width: 125px;
+  height: 125px;
+}
+
+.leetcode-dashboard__circular-chart {
+  width: 100%;
+  height: 100%;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: var(--border-subtle);
+  stroke-width: 4;
+}
+
+.circle-easy {
+  fill: none;
+  stroke: var(--accent-primary);
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dasharray 0.6s ease;
+}
+
+.leetcode-dashboard__circle-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.leetcode-dashboard__total-num {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.leetcode-dashboard__total-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.leetcode-dashboard__rankings {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.leetcode-dashboard__substat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+}
+
+.leetcode-dashboard__substat-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.leetcode-dashboard__substat-val {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.accent-lime {
+  color: var(--accent-primary) !important;
+}
+
+/* Difficulty Breakdown Bars */
+.leetcode-dashboard__breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.leetcode-dashboard__bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.leetcode-dashboard__bar-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.difficulty-tag {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.difficulty-tag.easy { color: var(--accent-primary); }
+.difficulty-tag.medium { color: var(--accent-secondary); }
+.difficulty-tag.hard { color: #A64D43; }
+
+.problem-count {
+  color: var(--text-secondary);
+}
+
+.leetcode-dashboard__progress-track {
+  height: 6px;
+  background-color: var(--border-subtle);
+  border-radius: var(--radius-pill);
+  overflow: hidden;
+}
+
+.leetcode-dashboard__progress-fill {
+  height: 100%;
+  border-radius: var(--radius-pill);
+  transition: width 0.6s ease;
+}
+
+.easy-fill { background-color: var(--accent-primary); }
+.med-fill { background-color: var(--accent-secondary); }
+.hard-fill { background-color: #A64D43; }
+
+.leetcode-dashboard__badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.5rem;
+}
+
+.leetcode-dashboard__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.accent-gold { color: var(--accent-secondary); }
+.accent-cyan { color: var(--accent-primary); }
+
+@media (max-width: 780px) {
+  .leetcode-dashboard__stats-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}

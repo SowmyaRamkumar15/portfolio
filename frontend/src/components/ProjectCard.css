@@ -1,0 +1,286 @@
+/* ===== Editorial Project Showcase ===== */
+.project-editorial {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+}
+
+/* Reverse layout for visual rhythm */
+.project-editorial--reverse {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.project-editorial--reverse .project-editorial__content {
+  order: 2;
+}
+
+.project-editorial--reverse .project-editorial__visual-pane {
+  order: 1;
+}
+
+/* Featured Styling */
+.project-editorial--featured {
+  position: relative;
+}
+
+.project-editorial__meta-bar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.project-editorial__number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent-secondary);
+  font-weight: 600;
+}
+
+.project-editorial__category {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.project-editorial__featured-pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--accent-tint);
+  color: var(--accent-primary);
+  border: 1px solid rgba(49, 92, 69, 0.2);
+  font-weight: 500;
+}
+
+.project-editorial__title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+}
+
+.project-editorial__section-block {
+  margin-bottom: 1.25rem;
+}
+
+.project-editorial__section-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.project-editorial__description {
+  font-family: var(--font-body);
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.project-editorial__contributions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.4rem;
+}
+
+.project-editorial__contributions-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.contrib-check {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* Technology Badges */
+.project-editorial__tech-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-bottom: 1.75rem;
+}
+
+.project-editorial__tech-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xs);
+  color: var(--text-primary);
+}
+
+/* Actions */
+.project-editorial__actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.project-editorial__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.65rem 1.15rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.project-editorial__btn--code {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.project-editorial__btn--code:hover {
+  border-color: var(--border-strong);
+  color: var(--accent-primary);
+  transform: translateY(-1px);
+}
+
+.project-editorial__btn--live {
+  background-color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  color: #FFFFFF;
+}
+
+.project-editorial__btn--live:hover {
+  background-color: var(--accent-primary-hover);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* Visual Pane */
+.project-editorial__visual-pane {
+  width: 100%;
+}
+
+.project-editorial__frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-subtle);
+  transition: border-color var(--transition-base);
+}
+
+.project-editorial:hover .project-editorial__frame {
+  border-color: var(--border-strong);
+}
+
+.project-editorial__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-editorial__empty-state {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(170deg, var(--bg-surface) 0%, var(--bg-secondary) 100%);
+  color: var(--text-muted);
+}
+
+.project-editorial__empty-icon {
+  margin-bottom: 0.65rem;
+  color: var(--accent-secondary);
+  opacity: 0.8;
+}
+
+.project-editorial__empty-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.project-editorial__empty-desc {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  max-width: 280px;
+  line-height: 1.4;
+}
+
+.project-editorial__file-input {
+  display: none;
+}
+
+.project-editorial__upload-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  box-shadow: var(--shadow-subtle);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.project-editorial__upload-btn:hover {
+  border-color: var(--border-strong);
+  color: var(--accent-primary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .project-editorial,
+  .project-editorial--reverse {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+    padding: 2.5rem 0;
+  }
+
+  .project-editorial--reverse .project-editorial__content {
+    order: 1;
+  }
+
+  .project-editorial--reverse .project-editorial__visual-pane {
+    order: 2;
+  }
+}

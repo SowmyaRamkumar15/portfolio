@@ -1,0 +1,143 @@
+/* ===== Editorial Experience Timeline ===== */
+.experience {
+  padding: var(--section-padding) 0;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.experience__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.experience__ledger {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border-color);
+}
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  padding: clamp(2.25rem, 4vw, 3.25rem) 0;
+  border-bottom: 1px solid var(--border-color);
+  align-items: start;
+}
+
+/* Time & Location Column */
+.timeline-entry__time-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.timeline-entry__period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--accent-secondary);
+}
+
+.timeline-entry__location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-body);
+  font-size: 0.775rem;
+  color: var(--text-muted);
+}
+
+/* Body */
+.timeline-entry__header {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 0.65rem;
+}
+
+.timeline-entry__company {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+.timeline-entry__role {
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--accent-primary);
+}
+
+.timeline-entry__project-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius-xs);
+  margin-bottom: 1rem;
+}
+
+.project-note-label {
+  color: var(--text-muted);
+}
+
+.project-note-title {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.timeline-entry__responsibilities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.timeline-entry__responsibilities li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.timeline-check {
+  color: var(--accent-primary);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.timeline-entry__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.timeline-tech-pill {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xs);
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 820px) {
+  .timeline-entry {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

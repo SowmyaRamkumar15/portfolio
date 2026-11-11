@@ -1,0 +1,191 @@
+/* ============================================
+   RESPONSIVE BREAKPOINTS
+   ============================================ */
+
+/* Large Desktop — 1440px */
+@media (max-width: 1440px) {
+  :root {
+    --container-max: 1100px;
+  }
+}
+
+/* Laptop — 1024px */
+@media (max-width: 1024px) {
+  :root {
+    --container-max: 960px;
+    --section-padding: clamp(3rem, 6vw, 6rem);
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+}
+
+/* Tablet — 768px */
+@media (max-width: 768px) {
+  :root {
+    --section-padding: clamp(2.5rem, 5vw, 4rem);
+    --container-padding: clamp(1rem, 5vw, 1.5rem);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1.05rem;
+  }
+
+  body {
+    font-size: 15px;
+  }
+
+  /* Two-column to single column */
+  .grid-2-col,
+  .two-col-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Three-column to two-column */
+  .grid-3-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Four-column to two-column */
+  .grid-4-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Navigation mobile-friendly */
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem var(--container-padding);
+    gap: 0.5rem;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  /* Utility visibility */
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+/* Large Mobile — 480px */
+@media (max-width: 480px) {
+  :root {
+    --section-padding: clamp(2rem, 4vw, 3rem);
+    --container-padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
+  /* Three-column to single column */
+  .grid-3-col {
+    grid-template-columns: 1fr;
+  }
+
+  /* Four-column to two-column on small screens */
+  .grid-4-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    min-height: auto;
+  }
+}
+
+/* Small Mobile — 360px */
+@media (max-width: 360px) {
+  :root {
+    --container-padding: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  body {
+    font-size: 13px;
+  }
+
+  /* Four-column to single column */
+  .grid-4-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   DESKTOP VISIBILITY UTILITY
+   ============================================ */
+
+.hide-desktop {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .hide-desktop {
+    display: initial !important;
+  }
+}
+
+/* ============================================
+   MOBILE MENU BUTTON DEFAULT STATE
+   ============================================ */
+
+.mobile-menu-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+}

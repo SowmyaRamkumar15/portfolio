@@ -1,0 +1,78 @@
+:root {
+  /* Warm editorial light palette (Default) */
+  --bg-primary: #F5F3ED;        /* Warm ivory */
+  --bg-secondary: #ECE8E0;      /* Light warm stone */
+  --bg-surface: #FCFAF6;        /* Clean elevated paper surface */
+  --bg-card: #FFFFFF;           /* Card container */
+  --bg-elevated: #EDE8DE;       /* Muted hover pill */
+  
+  --text-primary: #202522;      /* Deep charcoal */
+  --text-secondary: #57605A;    /* Soft charcoal / slate */
+  --text-muted: #828B84;        /* Subdued caption */
+
+  --accent-primary: #315C45;    /* Muted forest green */
+  --accent-primary-hover: #264A36;
+  --accent-secondary: #B87559;  /* Muted terracotta */
+  --accent-secondary-hover: #9E5F46;
+  --accent-tint: rgba(49, 92, 69, 0.08);
+  --accent-terracotta-tint: rgba(184, 117, 89, 0.09);
+
+  --border-color: rgba(32, 37, 34, 0.12); /* Soft neutral grey */
+  --border-subtle: rgba(32, 37, 34, 0.06);
+  --border-strong: rgba(32, 37, 34, 0.22);
+  
+  /* Typography */
+  --font-heading: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: 'Instrument Serif', 'Georgia', serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Editorial Spacing */
+  --section-padding: clamp(4.5rem, 7vw, 8rem);
+  --container-max: 1180px;
+  --container-padding: clamp(1.25rem, 5vw, 2.5rem);
+
+  /* Refined Radii (Less bulbous, more architectural) */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  /* Understated Shadows */
+  --shadow-subtle: 0 1px 3px rgba(32, 37, 34, 0.04), 0 2px 6px rgba(32, 37, 34, 0.03);
+  --shadow-hover: 0 4px 14px rgba(32, 37, 34, 0.08);
+  --shadow-card: 0 1px 4px rgba(32, 37, 34, 0.05);
+
+  /* Transitions */
+  --transition-fast: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="dark"] {
+  /* Editorial Night (Complementary deep charcoal & warm slate) */
+  --bg-primary: #121514;
+  --bg-secondary: #181C1A;
+  --bg-surface: #1E2320;
+  --bg-card: #1B201D;
+  --bg-elevated: #262D29;
+
+  --text-primary: #F0ECE4;
+  --text-secondary: #A3ACA5;
+  --text-muted: #6E7770;
+
+  --accent-primary: #76A889;       /* Soft sage forest in dark mode */
+  --accent-primary-hover: #8FBF9F;
+  --accent-secondary: #D48C6F;     /* Warm terracotta glow */
+  --accent-secondary-hover: #E39F83;
+  --accent-tint: rgba(118, 168, 137, 0.12);
+  --accent-terracotta-tint: rgba(212, 140, 111, 0.12);
+
+  --border-color: rgba(240, 236, 228, 0.10);
+  --border-subtle: rgba(240, 236, 228, 0.05);
+  --border-strong: rgba(240, 236, 228, 0.2);
+
+  --shadow-subtle: 0 2px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
